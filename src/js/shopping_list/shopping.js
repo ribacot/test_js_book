@@ -12,7 +12,7 @@ const listBooksEl = document.querySelector('.js-list-books');
 const serchActivEl = document.querySelector('.home');
 const activePage = document.querySelector('.shopping-list');
 let books = null;
-
+console.log('hello')
 // оформлення активної сторінки
 
 if (window.innerWidth < 768) {
