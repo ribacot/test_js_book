@@ -1,0 +1,192 @@
+@media screen and (max-width: 374px) {
+  .support {
+    position: relative;
+    width: auto;
+    height: 352px;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+    box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
+  
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .support {
+    position: relative;
+    width: 335px;
+    height: 352px;
+    overflow: hidden;
+    border-radius: 16px;
+  
+    background: radial-gradient(183.6% 183.01% at 59.76% -23.42%, #4F2EE8 18.03%, #FFFFFF 100%);
+    box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
+
+    
+  
+  }
+}
+@media screen and (min-width: 768px) {
+  .support {
+    height: 472px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .support {
+    width: 356px;
+    height: 490px;
+     
+  }
+}
+
+.support-header {
+  margin-top: 24px;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  font-family: DMSans-Bold;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -1.12px;
+  color: var(--white-color);
+}
+
+.ukraine-emblem {
+  fill: var(--white-color);
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+.support-list {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  counter-reset: list-counter;
+  color: var(--white-color);
+  font-family: DMSans-Regular;
+  letter-spacing: -0.56px;
+  
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  gap: 20px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 767px) {
+  .support-list {
+    gap: 20px;
+  }
+}
+
+.support-item {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 16px;
+ 
+
+}
+
+.support-item::before {
+  counter-increment: list-counter;
+  content: counter(list-counter, decimal-leading-zero);
+  
+}
+ 
+.support-logo {
+  cursor: pointer; 
+  width: auto;
+  height: 32px;
+  
+  }
+  
+
+.support-container {
+  max-height: 295px; 
+  overflow-y: hidden;
+  transition: height 0.3s ease, margin-right 0.3s ease;
+  
+}
+
+@media screen and (max-width: 767px) {
+  .support-container {
+    max-height: 190px;
+   
+  }
+}
+
+.expanded .support-container {
+  max-height: none; 
+}
+
+
+.icon-arrow {
+  fill: var(--brand-color);
+}
+
+
+.see-more-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .see-more-container {
+    bottom: 24px;
+   }
+}
+
+
+.see-more-funds {
+  border-radius: 50%;
+  border: none;
+  background-color: var(--white-color);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+@media screen and (min-width: 768px) {
+  .see-more-funds {
+    width: 38px;
+    height: 38px; 
+  }
+}
+
+/*  ----- стилізація скролбару ----- */
+.support-container::-webkit-scrollbar {
+  width: 8px; 
+  background-color: rgba(55, 29, 199, 0.432); 
+}
+
+.support-container::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.582); 
+  border-radius: 6px; 
+}
+
+.support-container::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+.support-container::-webkit-scrollbar-corner {
+  background-color: transparent; 
+}
+
+/*  ---- плавне зникнення і поява кнопки  ----- */
+
+.see-more-funds.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.see-more-funds.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}

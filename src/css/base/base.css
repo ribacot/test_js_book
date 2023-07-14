@@ -1,0 +1,242 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color: var(--background-color);
+  font-family: DMSans-Regular;
+  font-style: normal;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+:root {
+  --brand-color: #4f2ee8;
+  --text-color: #111111;
+  --subtitle-color: #b4afaf;
+  --categories-rgba-color: rgba(17, 17, 17, 0.6);
+  --background-color: #f6f6f6;
+  --bg-color-header-card: #ffffff;
+
+  --button-sign-up-color: #111111;
+  --button-sign-up-font-color: #f3f3f3;
+
+  --button-yelow-color: #eac645;
+  --button-yelow-font-color: #111111;
+
+  --gray-button-color: #f3f3f3;
+  --gray-rgba-color: rgba(246, 246, 246, 0.5);
+
+  --white-color: #ffffff;
+  --yelow-color: #eac645;
+  --pagination-butn: #b4afaf;
+  --black-color: #111111;
+}
+
+/* Кольори для темної теми */
+
+[dark] {
+  --brand-color: #4f2ee8;
+  --text-color: #ffffff;
+  --subtitle-color: #b4afaf;
+  --categories-rgba-color: rgba(255, 255, 255, 0.6);
+  --background-color: #202024;
+  --bg-color-header-card: #111111;
+
+  --button-sign-up-color: #f6f6f6;
+  --button-sign-up-font-color: #202024;
+
+  --button-yelow-color: #eac645;
+  --button-yelow-font-color: #111111;
+
+  --gray-button-color: #f3f3f3;
+
+  --white-color: #ffffff;
+  --yelow-color: #eac645;
+  --pagination-butn: #ffffff;
+  --black-color: #111111;
+}
+
+.container {
+  /* max-width: 1440px;
+    width: 100%; */
+  max-width: 375px;
+
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 24px;
+  }
+} /* ---header nav---- */
+.nav-title {
+  color: var(--text-color);
+  font-family: DMSans-Medium;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+}
+.sing-log {
+  font-family: DMSans-Medium;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+}
+
+/* ----для рендеру в main---- */
+.main-title {
+  font-family: DMSans-Bold;
+  font-size: 32px;
+  line-height: 1.19;
+  letter-spacing: -1.92px;
+
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .main-title {
+    font-family: DMSans-Bold;
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+}
+
+.brendcolor {
+  font-family: DMSans-Bold;
+  font-size: inherit;
+  color: var(--brand-color);
+}
+
+.title-for-categories {
+  color: var(--subtitle-color);
+  font-family: DMSans-Regular;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+.title-book {
+  font-family: DMSans-Bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.12;
+  letter-spacing: -0.64px;
+  color: var(--text-color);
+
+  margin-bottom: 4px;
+}
+
+.author {
+  color: var(--subtitle-color);
+  font-size: 12px;
+  font-family: DMSans-RegularItalic;
+  line-height: 1.16;
+  letter-spacing: -0.48px;
+}
+
+.shopping-list__subtitle {
+  color: var(--subtitle-color);
+  font-family: DMSans-Regular;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.36px;
+
+  max-width: calc(100% - 32px);
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .shopping-list__subtitle {
+    margin-bottom: 14px;
+  }
+}
+
+/* ----опис книг---- */
+.description {
+  color: var(--text-color);
+  font-family: DMSans-Regular;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.56px;
+}
+/* ----для категорій в aside---- */
+.categories__title {
+  font-family: DMSans-Regular;
+  color: var(--categories-rgba-color);
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.36px;
+  transition: color 250ms linear;
+}
+
+.categories__title:hover,
+.categories__title:focus {
+  font-family: DMSans-Bold;
+  color: var(--brand-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.categories__title-active {
+  color: var(--brand-color);
+  font-family: DMSans-Bold;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+}
+/* ---модальне вікно з книгою--- */
+.book-title-in-modal {
+  color: var(--text-color);
+  font-family: DMSans-Bold;
+  font-size: 16px;
+  line-height: 1.12;
+  letter-spacing: -0.96px;
+}
+.button-modal {
+  color: var(--text-color);
+  font-family: DMSans-Bold;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.18px;
+  text-transform: uppercase;
+}
+/* ---button--- */
+
+.button {
+  font-family: DMSans-Bold;
+  color: var(--text-color);
+  background-color: transparent;
+  border-radius: 40px;
+  border: 2px solid var(--brand-color);
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--white-color);
+  background-color: var(--brand-color);
+}
+/* Фільтр для амазон темної теми */
+
+.filter-img {
+  filter: grayscale(100%) invert(50%) brightness(200%);
+}

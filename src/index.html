@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <meta name="description" content=" Find a wide selection of books in our book library. Discover new authors, genres, and stories."></meta>
+    <meta name="keywords" content=" book library, books, authors, genres, reading"></meta>
+    <title>Book Shelf</title>
+    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <section class="section-shoping">
-      <div class="container">
-        <h1>Shopping <span>List</span></h1>
-        <ul class="js-list-books">
-          <!-- <li>
-            <div><img src="" alt="" /></div>
-            <div>
-              <div>
-                <h3></h3>
-                <h2></h2>
-                <p></p>
-              </div>
-              <div>
-                <span></span>
-                <div>
-                  <a href="#"></a><a href="#"></a><a href="#"></a>
-                </div>
-              </div>
-            </div>
-            <button></button>
-          </li>
-        </ul>
-      </div> -->
-    </section>
+    <div class="wrapper">
+      <div class="wrapper__header">
+        <include src="./partials/header.html"></include>
+      </div>
+      <main class="main container">
+        <aside class="wrapper__sidebar">
+          <include src="./partials/categories.html"></include>
 
-    <script type="module" src="./index.js"></script>
+          <include src="./partials/support.html"></include>
+        </aside>
+        <div class="wrapper__content">
+          <include src="./partials/hero.html"></include>
+        </div>
+      </main>
+    </div>
+
+    <include src="./partials/modal.html"></include>
+
+    <include src="./partials/modalLogin.html"></include>
+
+    <include src="./partials/loader.html"></include>
+
+    <include src="./partials//scrollUp.html"></include>
+
   </body>
 </html>

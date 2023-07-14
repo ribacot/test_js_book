@@ -1,0 +1,60 @@
+<div class="backdrop-login">
+  <!-- Modal-login -->
+  <div class="modal login">
+    <button type="button" class="modal-login-close" aria-label="Close modal window">
+      <svg class="modal-login-close-icon">
+        <use href="./images/sprite.svg#icon-close"></use>
+      </svg>
+    </button>
+
+    <form action="submit" class="login-form">
+      <input
+      aria-label="Input name"
+        class="login-input name-js"
+        type="text"
+        name="username"
+        placeholder="Name"
+        pattern="[a-zA-Z]{2,15}"
+      />
+
+      <div class="wrap-input">
+        <input
+        aria-label="Input email"
+          class="login-input"
+          type="email"
+          name="useremail"
+          placeholder="Email"
+        />
+
+        <svg class="input-icon">
+          <use href="./images/sprite.svg#icon-email"></use>
+        </svg>
+      </div>
+
+      <div class="wrap-input">
+        <input
+        aria-label="Input password"
+          class="login-input"
+          type="password"
+          name="userpass"
+          placeholder="Password"
+          autocomplete="username"
+        />
+
+        <svg class="input-icon">
+          <use href="./images/sprite.svg#icon-lock"></use>
+        </svg>
+      </div>
+      <button type="submit" class="button login sub-btn-js">Sign up</button>
+    </form>
+
+    <div class="sign">
+      <button type="button" class="btn-sign sing-up-js" aria-label="Sign up">
+        <span class="span-sing-up active-btn">Sign up</span>
+      </button>
+      <button type="button" class="btn-sign sing-in-js disabled-btn" aria-label="Sign in">
+        <span class="span-sing-in">Sign in</span>
+      </button>
+    </div>
+  </div>
+</div>
